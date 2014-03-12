@@ -33,9 +33,16 @@ unsetopt correct_all
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git pip virtualenvwrapper)
+plugins=(git pip virtualenvwrapper ruby rvm gem brew)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/bin:$HOME/bin:$HOME/.rvm/bin:$PATH
+# export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/bin:$HOME/bin:$HOME/.rvm/bin:$PATH
+
+# setup rvm
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+
+# added by travis gem
+[[ -s /Users/kunxi/.travis/travis.sh ]] && source $HOME/.travis/travis.sh
